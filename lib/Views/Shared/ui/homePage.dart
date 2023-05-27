@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 // import 'package:ant_design_flutter/ant_design_flutter.dart';
 
 import '../appstyle.dart';
@@ -115,9 +116,23 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                               return Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
-                                  color: Colors.grey,
+                                  decoration: const BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.all(Radius.circular(16)),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black38,
+                                        spreadRadius: 1,
+                                        blurRadius: 0.8,
+                                        offset: Offset(0, 1)
+                                      )
+                                    ]
+                                  ),
                                   height: MediaQuery.of(context).size.height*0.12,
                                   width: MediaQuery.of(context).size.width * 0.28,
+                                  child: CachedNetworkImage(
+                                    imageUrl:"https://d326fntlu7tb1e.cloudfront.net/uploads/58282ea3-b815-4d26-9f4f-382aa62f67cf-HP5404_a1.webp"
+                                    ),
                                 ),
                               );
                             }),
