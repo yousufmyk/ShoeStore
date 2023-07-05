@@ -28,7 +28,7 @@ class _ProductCardState extends State<ProductCard> {
   Widget build(BuildContext context) {
     bool selected = true;
     return Padding(
-      padding: EdgeInsets.fromLTRB(8, 0, 20, 0),
+      padding: const EdgeInsets.fromLTRB(8, 0, 20, 0),
       child: ClipRRect(
         borderRadius: BorderRadius.all(Radius.circular(16)),
         child: Container(
