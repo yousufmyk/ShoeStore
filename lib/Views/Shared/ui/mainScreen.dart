@@ -8,8 +8,10 @@ import 'package:provider/provider.dart';
 import 'package:shoe_store/Controllers/mainScreen_provider.dart';
 import 'package:shoe_store/Views/Shared/ui/cartPage.dart';
 import 'package:shoe_store/Views/Shared/ui/homePage.dart';
+import 'package:shoe_store/Views/Shared/ui/product_by_cat.dart';
 import 'package:shoe_store/Views/Shared/ui/profilePgae.dart';
 import 'package:shoe_store/Views/Shared/ui/searchPage.dart';
+
 
 import '../appstyle.dart';
 import '../bottom_Nav_Bar.dart';
@@ -26,10 +28,10 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  List<Widget> pageList = const[
+  List<Widget> pageList = [
     HomePage(),
     SearchPage(),
-    HomePage(),
+    ProductByCat(),
     CartPage(),
     ProfilePage(),
   ];
